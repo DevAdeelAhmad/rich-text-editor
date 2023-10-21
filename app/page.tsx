@@ -28,8 +28,8 @@ export default function Home() {
   function onSubmit(values: z.infer<typeof formSchema>) {
   }
   return (
-    <main className="p-24 text-xl">
-      <h1 className="text-2xl font-bold text-center">Developed By <Link href='https://linktr.ee/devadeelahmad' className="text-violet-500">DevAdeelAhmad</Link></h1>
+    <main className="p-5 lg:p-24 text-xl">
+      <h1 className="text-2xl font-bold text-center py-10 lg:py-0">Developed By <Link href='https://linktr.ee/devadeelahmad' className="text-violet-500">DevAdeelAhmad</Link></h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField control={form.control} name="title" render={({ field }) => (
