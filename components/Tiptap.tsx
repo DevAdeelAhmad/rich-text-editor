@@ -10,12 +10,7 @@ const TipTap = ({ description, onChange }: {
     onChange: (richText: string) => void
 }) => {
     const editor = useEditor({
-        extensions: [StarterKit.configure({}), Heading.configure({
-            HTMLAttributes: {
-                class: 'text-4xl font-bold',
-                levels: [2],
-            }
-        })],
+        extensions: [StarterKit.configure({}), Heading.configure({})],
         content: description,
         editorProps: {
             attributes: {

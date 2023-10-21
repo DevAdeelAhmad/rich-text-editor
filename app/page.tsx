@@ -28,29 +28,29 @@ export default function Home() {
   function onSubmit(values: z.infer<typeof formSchema>) {
   }
   return (
-    <main className="p-5 lg:p-24 text-xl">
-      <h1 className="text-2xl font-bold text-center py-10 lg:py-0">Developed By <Link href='https://linktr.ee/devadeelahmad' className="text-violet-500">DevAdeelAhmad</Link></h1>
+    <main className="p-5 lg:p-24 text-xl bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 h-screen">
+      <h1 className="text-2xl font-bold text-center py-10 lg:py-0 text-white">Developed By <Link href='https://linktr.ee/devadeelahmad' className="text-amber-700">DevAdeelAhmad</Link></h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField control={form.control} name="title" render={({ field }) => (
             <FormItem>
-              <FormLabel style={{ fontSize: 25 }}>Title</FormLabel>
+              <FormLabel style={{ fontSize: 25, color: "white", fontWeight: 700 }}>Title</FormLabel>
               <FormControl>
-                <Input placeholder="Main title of your product" {...field} />
+                <Input style={{ color: "black", background: "white", fontSize: 25, paddingLeft: 15, paddingTop: 24, paddingBottom: 24 }} {...field} />
               </FormControl>
             </FormItem>
           )} />
           <div className="mt-6">
             <FormField control={form.control} name="description" render={({ field }) => (
               <FormItem>
-                <FormLabel style={{ fontSize: 25 }}>Description</FormLabel>
+                <FormLabel style={{ fontSize: 25, color: "white", fontWeight: 700 }}>Description</FormLabel>
                 <FormControl>
-                  <TipTap description={field.name} onChange={field.onChange} />
+                  <TipTap description="" onChange={field.onChange} />
                 </FormControl>
               </FormItem>
             )} />
           </div>
-          <Button className="my-4" type="submit">Submit</Button>
+          <Button className="w-32 h-12 text-xl font-bold" type="submit">Submit</Button>
         </form>
       </Form>
     </main>
